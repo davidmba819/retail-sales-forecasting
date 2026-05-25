@@ -69,28 +69,66 @@ Completed:
 * markdown analysis
 * economic factor analysis
 * time-based sales analysis
+* correlation analysis
+* EDA summary and conclusions
+
+---
 
 ## Notebook 2 — Feature Engineering & Data Preparation
 
-Planned:
+Completed:
 
-* date feature extraction
 * missing value treatment
+* time-based feature engineering
 * categorical encoding
-* feature transformation
-* train-test split
-* scaling
-* final modeling dataset preparation
+* lag feature engineering
+* rolling window feature engineering
+* cyclical time encoding
+* forecasting feature generation
+* chronological train-test split
+* feature scaling
+* Yeo-Johnson target transformation
+* forecasting dataset preparation
+
+### Forecasting Features Created
+
+* `Lag_1`
+* `Lag_4`
+* `Rolling_Median_4`
+* `Rolling_Std_4`
+* `Month_Sin`
+* `Month_Cos`
+* `WeekOfYear_Sin`
+* `WeekOfYear_Cos`
+
+### Final Modeling Datasets
+
+* `X_train`
+* `X_test`
+* `X_train_scaled`
+* `X_test_scaled`
+* `y_train`
+* `y_test`
+* `y_train_log`
+* `y_test_log`
+
+---
 
 ## Notebook 3 — Modeling & Forecasting
 
 Planned:
 
-* regression models
-* boosting models
-* Prophet forecasting
+* Linear Regression
+* Ridge Regression
+* Lasso Regression
+* Random Forest
+* XGBoost
+* LightGBM
+* CatBoost
+* Prophet Forecasting
 * model evaluation
 * model comparison
+* hyperparameter tuning
 * forecasting visualization
 * business insights and recommendations
 
@@ -107,6 +145,16 @@ Planned:
 * Markdown activities show weak to moderate relationships with sales.
 * Economic indicators show weak direct relationships with weekly sales.
 * The dataset contains strong time-based patterns suitable for forecasting.
+
+---
+
+# Feature Engineering Highlights
+
+* Historical lag features were created to capture previous sales behavior.
+* Rolling window statistics were generated to model recent sales trends and volatility.
+* Cyclical encoding was applied to seasonal variables to preserve circular time relationships.
+* A chronological split was used to prevent data leakage during forecasting evaluation.
+* Yeo-Johnson transformation was applied to reduce target skewness and stabilize the sales distribution.
 
 ---
 
@@ -129,9 +177,10 @@ Planned:
 
 Current Phase:
 
-* Exploratory Data Analysis Completed
+* Feature Engineering & Data Preparation Completed
 
 Next Phase:
 
-* Feature Engineering and Data Preparation
+* Machine Learning Modeling & Forecasting
 
+---
