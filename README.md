@@ -1,16 +1,3 @@
-Your README is already very strong structurally.
-What it mainly needs now is:
-
-* simpler wording
-* remove Prophet
-* update project status
-* mention final best model
-* make it sound more natural and less overly formal
-
-Here’s a cleaner and more human version:
-
----
-
 # Retail Sales Forecasting Using Machine Learning
 
 ## Project Overview
