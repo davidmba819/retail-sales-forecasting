@@ -1,36 +1,49 @@
+Your README is already very strong structurally.
+What it mainly needs now is:
+
+* simpler wording
+* remove Prophet
+* update project status
+* mention final best model
+* make it sound more natural and less overly formal
+
+Here’s a cleaner and more human version:
+
+---
+
 # Retail Sales Forecasting Using Machine Learning
 
 ## Project Overview
 
-This project focuses on forecasting future retail sales using Walmart sales data. The goal is to analyze historical sales behavior, identify important business patterns, and build machine learning models capable of predicting future weekly sales.
+This project focuses on forecasting future retail sales using Walmart sales data. The aim is to understand historical sales patterns, identify key business drivers, and build machine learning models capable of predicting weekly sales accurately.
 
 The project combines:
 
 * exploratory data analysis
-* retail business analysis
 * feature engineering
 * machine learning
 * forecasting techniques
+* business insight generation
 
 ---
 
 # Business Problem
 
-Retail businesses depend on accurate sales forecasting for:
+Retail businesses rely heavily on accurate sales forecasting for:
 
 * inventory planning
 * staffing decisions
-* promotional strategies
-* revenue planning
+* promotional planning
+* revenue forecasting
 
-Poor forecasting may lead to:
+Poor forecasting can lead to:
 
 * overstocking
 * stock shortages
-* revenue loss
-* operational inefficiencies
+* lost revenue
+* inefficient operations
 
-This project aims to understand the factors influencing weekly retail sales and develop models capable of forecasting future sales behavior.
+This project explores how machine learning can be used to improve retail sales forecasting and support better business decision-making.
 
 ---
 
@@ -41,10 +54,10 @@ The project uses the Walmart Store Sales Forecasting dataset.
 ### Datasets Used
 
 * `train.csv` → historical weekly sales
-* `features.csv` → economic indicators and markdown data
-* `stores.csv` → store metadata
+* `features.csv` → markdown and economic indicators
+* `stores.csv` → store information
 
-### Main Target Variable
+### Target Variable
 
 * `Weekly_Sales`
 
@@ -54,41 +67,40 @@ The project uses the Walmart Store Sales Forecasting dataset.
 
 ## Notebook 1 — Data Understanding, Cleaning & EDA
 
-Completed:
+Completed tasks:
 
 * dataset inspection
 * dataset merging
-* missing value investigation
+* missing value analysis
 * duplicate checks
 * data cleaning
-* target variable analysis
-* seasonality analysis
+* sales distribution analysis
+* seasonal analysis
 * holiday sales analysis
 * store-level analysis
 * department-level analysis
 * markdown analysis
 * economic factor analysis
-* time-based sales analysis
+* time-based analysis
 * correlation analysis
-* EDA summary and conclusions
+* EDA summary and insights
 
 ---
 
 ## Notebook 2 — Feature Engineering & Data Preparation
 
-Completed:
+Completed tasks:
 
 * missing value treatment
 * time-based feature engineering
 * categorical encoding
-* lag feature engineering
+* lag feature creation
 * rolling window feature engineering
-* cyclical time encoding
-* forecasting feature generation
+* cyclical feature encoding
 * chronological train-test split
 * feature scaling
 * Yeo-Johnson target transformation
-* forecasting dataset preparation
+* final forecasting dataset preparation
 
 ### Forecasting Features Created
 
@@ -116,45 +128,72 @@ Completed:
 
 ## Notebook 3 — Modeling & Forecasting
 
-Planned:
+Models implemented:
 
 * Linear Regression
 * Ridge Regression
 * Lasso Regression
+* Elastic Net
+* Decision Tree
 * Random Forest
+* AdaBoost
+* Gradient Boosting
 * XGBoost
 * LightGBM
 * CatBoost
-* Prophet Forecasting
+
+Completed tasks:
+
+* baseline forecasting
 * model evaluation
+* preprocessing comparison
 * model comparison
 * hyperparameter tuning
-* forecasting visualization
-* business insights and recommendations
+* feature importance analysis
+* forecast visualization
+* business recommendations
+
+---
+
+# Best Model Performance
+
+The tuned LightGBM model achieved the best overall forecasting performance:
+
+* RMSE: `3098.22`
+* MAE: `1473.30`
+* R² Score: `0.9804`
 
 ---
 
 # Key Insights from EDA
 
-* Weekly sales are heavily right-skewed with extreme sales spikes.
-* Strong seasonal sales patterns were observed during end-of-year periods.
-* Holiday periods contribute to higher sales variability.
-* Larger stores generally produce higher sales.
-* Store type influences sales behavior.
-* Sales vary significantly across departments.
-* Markdown activities show weak to moderate relationships with sales.
-* Economic indicators show weak direct relationships with weekly sales.
-* The dataset contains strong time-based patterns suitable for forecasting.
+* Weekly sales were heavily right-skewed with extreme sales spikes.
+* Strong seasonal sales patterns appeared during end-of-year periods.
+* Holiday periods contributed to higher sales variability.
+* Sales varied significantly across stores and departments.
+* Historical sales behavior strongly influenced future sales.
+* Markdown activities and economic indicators showed moderate influence on sales patterns.
 
 ---
 
 # Feature Engineering Highlights
 
-* Historical lag features were created to capture previous sales behavior.
-* Rolling window statistics were generated to model recent sales trends and volatility.
-* Cyclical encoding was applied to seasonal variables to preserve circular time relationships.
-* A chronological split was used to prevent data leakage during forecasting evaluation.
-* Yeo-Johnson transformation was applied to reduce target skewness and stabilize the sales distribution.
+* Lag features were created to capture historical sales behavior.
+* Rolling statistics were generated to model recent sales trends and volatility.
+* Cyclical encoding preserved seasonal relationships in time-based variables.
+* A chronological split was used to avoid data leakage during forecasting evaluation.
+* Yeo-Johnson transformation helped reduce target skewness and stabilize the sales distribution.
+
+---
+
+# Feature Importance Findings
+
+The feature importance analysis showed that:
+
+* department-level behavior strongly influenced sales forecasting
+* historical sales patterns were major forecasting drivers
+* seasonal variables contributed significantly to forecasting performance
+* markdown and economic variables also influenced sales behavior
 
 ---
 
@@ -169,18 +208,14 @@ Planned:
 * XGBoost
 * LightGBM
 * CatBoost
-* Prophet
+* Joblib
 
 ---
 
-# Project Status
+# Final Conclusion
 
-Current Phase:
+The project demonstrated how machine learning and feature engineering can be applied to retail sales forecasting. Among all the models tested, tuned LightGBM achieved the strongest forecasting performance and was able to capture important sales patterns effectively.
 
-* Feature Engineering & Data Preparation Completed
+The project also showed the importance of historical sales behavior, seasonal trends, and department-level differences in retail forecasting.
 
-Next Phase:
-
-* Machine Learning Modeling & Forecasting
-
----
+Overall, the forecasting pipeline provides useful insights that can support inventory planning, operational management, and business decision-making in the retail sector.
